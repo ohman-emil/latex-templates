@@ -1,0 +1,20 @@
+% Packages
+\usepackage{hyperref}
+
+% Config
+\setlength{\parindent}{0pt}
+
+% Add PDF-metadata
+\makeatletter
+\hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author}
+}
+\makeatother
+
+% BibLaTex
+\usepackage[
+    backend=bibtex,
+    style=numeric%authoryear-comp
+]{biblatex}
+\addbibresource{references.bib}
