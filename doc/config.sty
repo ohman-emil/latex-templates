@@ -1,5 +1,6 @@
 % Packages
 \usepackage{hyperref}
+\usepackage{csquotes}
 
 % Config
 \setlength{\parindent}{0pt}
@@ -14,7 +15,10 @@
 
 % BibLaTex
 \usepackage[
-    backend=bibtex,
-    style=numeric%authoryear-comp
+    style=numeric,
+    giveninits=false,
+    uniquename=init,
+    language=swedish,
+    backend=biber
 ]{biblatex}
 \addbibresource{references.bib}
