@@ -1,0 +1,24 @@
+% Packages
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+% Config
+\setlength{\parindent}{0pt}
+
+% Add PDF-metadata
+\makeatletter
+\hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author}
+}
+\makeatother
+
+% BibLaTex
+\usepackage[
+    style=numeric,
+    giveninits=false,
+    uniquename=init,
+    language=swedish,
+    backend=biber
+]{biblatex}
+\addbibresource{references.bib}
