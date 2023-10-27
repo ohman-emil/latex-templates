@@ -1,0 +1,59 @@
+% PACKAGES
+%\usepackage[version=4]{mhchem} % Chemistry notation
+%\usepackage{siunitx} % Units
+%\usepackage[style=authoryear-comp, giveninits=false, uniquename=init, dashed=false, backend=biber, language=swedish, natbib]{biblatex} % Reference manager
+%\usepackage{csquotes} % Nessecary for biblatex
+%\usepackage{parskip} % Paragraph spacing
+%\usepackage{tabularx} % Tables
+%\usepackage{array} % Set width in tables
+%\usepackage{caption} % Improved captions
+%\usepackage{pgfplots} % Plots and figures
+\usepackage{hyperref} % Links
+\usepackage{enumitem} % Lists
+
+\usepackage[
+    colorinlistoftodos=true,
+    textwidth=3cm,
+    swedish,
+    backgroundcolor=SpringGreen,
+    %backgroundcolor=White,
+    linecolor=black
+]{todonotes} % Comments inside doc
+
+% SETTINGS
+\renewcommand{\arraystretch}{1.5} % Table spacing
+\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setlist[itemize]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\makeatletter
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue,
+    pdftitle={\@title},
+    pdfauthor={\@author}
+}
+\makeatother
+
+% \pgfplotsset{compat=1.18} % Necessary for pgfplots
+
+% ENVIRONMENTS
+\newenvironment{header}
+{\makeatletter\begin{center}\setlength{\parskip}{0em}}
+{\setlength{\parskip}{1em}\end{center}\makeatother}
+
+% BIBLATEX
+%\addbibresource{references.bib}
+%\DeclareNameAlias{sortname}{given-family} % Names in reference list
+%\setlength\bibitemsep{1.5\itemsep}
+%\DeclareLabeldate{
+%  \field{date}
+%  \field{year}
+%  \field{eventdate}
+%  \field{origdate}
+%  \literal{nodate}
+%}

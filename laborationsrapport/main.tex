@@ -1,0 +1,43 @@
+% V20230226
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+
+\title{Titel}
+\author{Författare Författaresson}
+\date{yyyy-mm-dd} % \today
+
+\input{config.sty}
+
+\begin{document}
+
+\begin{header}
+    %\vspace*{2em}
+    {\LARGE\textbf{\@title}}
+
+    \vspace{1em}
+    \@author\\
+    Kurs\\
+    \textit{Skola/Institut}
+    
+    \vspace{1em}
+    Handledare: Handledare Handledaresson\\
+    Medlaboranter: Namn Namnsson, Namn Namnsson
+    
+    \vspace{1em}
+    \@date
+    
+\end{header}
+
+%\thispagestyle{empty}
+%\newpage
+\tableofcontents
+%\newpage
+%\setcounter{page}{1}
+
+\section{Inledning}
+
+%\printbibliography
+
+\end{document}
