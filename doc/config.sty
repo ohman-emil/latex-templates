@@ -1,5 +1,5 @@
 % Packages
-\usepackage{hyperref}
+\usepackage[pdfusetitle]{hyperref}
 \usepackage{csquotes}
 
 % Config
@@ -8,8 +8,11 @@
 % Add PDF-metadata
 \makeatletter
 \hypersetup{
-    pdftitle={\@title},
-    pdfauthor={\@author}
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
 }
 \makeatother
 
