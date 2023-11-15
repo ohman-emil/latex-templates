@@ -1,0 +1,43 @@
+% Packages
+\usepackage[pdfusetitle]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{xcolor}
+%\usepackage{todonotes}
+\usepackage{parskip}
+%\usepackage{pgfplots}
+\usepackage{caption}
+
+% Config
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1em}
+\setlength{\fboxsep}{4pt}
+\footer{}{\thepage}{}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+% Exam class config
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösning:}\enspace}
+\unframedsolutions
+\renewcommand{\thequestion}{\arabic{question}}
+
+% Add PDF-metadata
+\makeatletter
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\makeatother
+
+% Commands
+\newcommand{\ssep}{\mid}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\alert}[1]{\par\parbox{\textwidth}{\bfseries\textcolor{red}{#1}}}
+\newcommand{\highlight}[1]{{\bfseries\textcolor{orange}{#1}}}
+\newcommand{\bmtx}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
