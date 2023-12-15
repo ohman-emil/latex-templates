@@ -5,6 +5,12 @@
 % Config
 %\setlength{\parindent}{0pt}
 
+% Fancy Header
+\pagestyle{fancy}
+\fancyhead{}
+\makeatletter\lhead{\@title}\makeatother
+\makeatletter\rhead{\@author, \@date}\makeatother
+
 % Add PDF-metadata
 \makeatletter
 \hypersetup{
