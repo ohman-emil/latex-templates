@@ -9,6 +9,8 @@
 % Import config file
 \usepackage{config}
 
+\def\comments{1} % 1=show comments; 0=hide comments
+
 \begin{document}
 \thispagestyle{plain} % Remove header on first page
 
@@ -23,6 +25,6 @@
 This is some text inside this section!
 
 \section{This is another section}
-Inside this section, there is some also text. In \LaTeX, you can also write maths: \(\gamma=\frac{1}{sqrt{1-{\frac{v}{c}}^2}}\).
+Inside this section, there is some also text. In \LaTeX, you can also write maths: \(\gamma=\frac{1}{\sqrt{1-{\frac{v^2}{c^2}}}}\).
 
 \end{document}

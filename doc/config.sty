@@ -1,19 +1,25 @@
 % Packages
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage[total={6in,8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{cleveref}
+\usepackage{xcolor}
 
 % Config
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{\baselineskip}
 
 % Fancy Header
+\setlength{\headheight}{12.5pt}
 \pagestyle{fancy}
 \fancyhead{}
 \makeatletter\lhead{\@title}\makeatother
-\makeatletter\rhead{\@author, \@date}\makeatother
+\makeatletter\rhead{\@date}\makeatother
 
 % Add PDF-metadata
 \makeatletter
@@ -26,3 +32,7 @@
 }
 \makeatother
 
+% Comments
+\newcommand{\alert}[1]{\if\comments1\par\parbox{\textwidth}{\bfseries\textcolor{red}{#1}}\fi}
+\newcommand{\highlight}[1]{\if\comments1{\bfseries\textcolor{orange}{#1}}\fi}
+\newcommand{\comment}[1]{\if\comments1\noindent\begin{center}\fbox{\parbox{0.8\textwidth}{#1}}\end{center}\fi}
