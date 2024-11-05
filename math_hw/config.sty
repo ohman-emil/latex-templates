@@ -2,19 +2,25 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{mathtools}
 \usepackage{xcolor}
 %\usepackage{todonotes}
 \usepackage{parskip}
 %\usepackage{pgfplots}
 \usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{cleveref}
 
 % Config
 \setlength{\parindent}{0pt}
 %\setlength{\parskip}{1em}
 \setlength{\fboxsep}{4pt}
+\setlength{\headheight}{12.5pt}
+\headrule
+\makeatletter\lhead{\@title}\makeatother
+\makeatletter\rhead{\@author, \@date}\makeatother
 \footer{}{\thepage}{}
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 
 % Exam class config
 \renewcommand{\solutiontitle}{\noindent\textbf{Lösning:}\enspace}
@@ -34,10 +40,21 @@
 
 % Commands
 \newcommand{\ssep}{\mid}
+\newcommand{\bmtx}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
-\newcommand{\alert}[1]{\par\parbox{\textwidth}{\bfseries\textcolor{red}{#1}}}
-\newcommand{\highlight}[1]{{\bfseries\textcolor{orange}{#1}}}
-\newcommand{\bmtx}[1]{\begin{bmatrix}#1\end{bmatrix}}
-\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\refl}{refl}
+\DeclareMathOperator{\im}{im}
+
+% Comments
+\newcommand{\alert}[1]{\if\comments1\par\parbox{\textwidth}{\bfseries\textcolor{red}{#1}}\fi}
+\newcommand{\highlight}[1]{\if\comments1{\bfseries\textcolor{orange}{#1}}\fi}
+\newcommand{\comment}[1]{\if\comments1\noindent\begin{center}\fbox{\parbox{0.8\textwidth}{#1}}\end{center}\fi}
