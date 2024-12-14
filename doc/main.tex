@@ -1,7 +1,8 @@
 \documentclass[a4paper]{article}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{t1enc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \title{Document title}
 \author{Emil Öhman}
@@ -11,14 +12,12 @@
 \usepackage{config}
 
 \def\comments{1} % 1=show comments; 0=hide comments
+\def\titleformat{1} % 1=center, 2=left, 3=center w rule
 
 \begin{document}
 \thispagestyle{plain} % Remove header on first page
 
-\makeatletter
-\noindent\huge{\textbf{\@title}}\vspace{0.33em}\\
-\Large{\@author, \@date}\normalsize
-\makeatother
+\maketitle % Title
 
 \tableofcontents
 
@@ -26,6 +25,9 @@
 This is some text inside this section!
 
 \section{This is another section}
-Inside this section, there is some also text. In \LaTeX, you can also write maths: \(\gamma=\frac{1}{\sqrt{1-{\frac{v^2}{c^2}}}}\).
+Inside this section, there is some also text. In \LaTeX, you can also write maths:
+\begin{equation*}
+    \gamma=\frac{1}{\sqrt{1-{\frac{v^2}{c^2}}}}
+\end{equation*}
 
 \end{document}

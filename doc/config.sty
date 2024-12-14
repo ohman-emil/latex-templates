@@ -10,6 +10,34 @@
 \usepackage{cleveref}
 \usepackage{xcolor}
 
+% Redefine maketitle
+\renewcommand{\maketitle}{%
+    \makeatletter
+    \if\titleformat2
+        \noindent\huge{\textbf{\@title}}\vspace{0.33em}\\
+        \Large{\@author, \@date}\normalsize
+    \else\if\titleformat3
+        \begin{center}
+            \hrulefill\\[0.25em]
+            \LARGE{\textsc{\@title}}\\[0.25em]
+            \normalsize
+            \@author\\[0.25em]
+            \@date\\
+            \normalsize
+            \hrulefill
+        \end{center}
+    \else
+        \begin{center}
+            \noindent\LARGE{\textbf{\@title}}\vspace{0.33em}\\
+            \normalsize
+            \@author\\[0.25em]
+            \@date
+            \normalsize
+        \end{center}
+    \fi\fi
+    \makeatother
+}
+
 % Config
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{\baselineskip}
